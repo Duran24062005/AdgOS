@@ -1,4 +1,4 @@
-# mini-rtos
+# AdgOS - mini-rtos 
 
 Un RTOS preemptivo mínimo para microcontroladores **ARM Cortex-M**, escrito
 en Rust `no_std` / `no_main`, sin heap y sin dependencias más allá de
