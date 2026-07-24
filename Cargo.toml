@@ -1,0 +1,27 @@
+[package]
+name = "mini-rtos"
+version = "0.1.0"
+edition = "2021"
+authors = ["Tu Nombre <tu@email.com>"]
+description = "Un RTOS mínimo preemptivo para microcontroladores ARM Cortex-M, escrito en Rust."
+
+[dependencies]
+cortex-m = "0.7"
+cortex-m-rt = "0.7"
+panic-halt = "0.2"
+
+[profile.release]
+opt-level = "s"    # optimizar por tamaño, típico en embebidos
+lto = true
+codegen-units = 1
+debug = true        # símbolos útiles para depurar con probe-rs/gdb
+
+[profile.dev]
+opt-level = 1
+debug = true
+
+# El binario final no debe llevar el runtime estándar de Rust.
+[[bin]]
+name = "mini-rtos"
+test = false
+bench = false
