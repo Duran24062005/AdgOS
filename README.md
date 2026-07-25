@@ -1,4 +1,4 @@
-# AdgOS - mini-rtos 
+# AdgOS - Mini-rtos 
 
 Un RTOS preemptivo mínimo para microcontroladores **ARM Cortex-M**, escrito
 en Rust `no_std` / `no_main`, sin heap y sin dependencias más allá de
@@ -128,5 +128,3 @@ impl Mutex {
 
 No es óptimo (no hay wait-queues reales), pero es un punto de partida
 correcto sobre el que iterar.
-# AdRTOS
-# AdgOS
